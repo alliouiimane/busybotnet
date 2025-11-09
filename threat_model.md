@@ -1,0 +1,84 @@
+## File: runit/runsvdir.c
+- Type: C
+- Entrée:
+  - Paramètres de démarrage du daemon (nom des services, options de configuration)
+  - Variables d'environnement héritées
+- Transformation / traitement:
+  - Utilise `vfork()` pour créer un processus enfant puis `execlp()` pour remplacer l'image processus par `runsv`.
+  - Gère signaux et boucle de création/respawn de services.
+- Sortie:
+  - Lancement d’un sous-processus `runsv` (service)
+  - Logs système / messages d'erreur
+- Points de risque:
+  - **Usage de `vfork()` + `execlp()`** : exécution de nouveaux binaires — risque d'exécution de code non contrôlé si les arguments ou chemins sont manipulables. — **HIGH**
+  - **Possibilité d'injection d'arguments** si des données non-sanitized sont passées au `execlp`. — **HIGH**
+  - Si l’exécutable remplacé est compromis, cela permet exécution persistante et élévation locale. — **HIGH**
+- Recommandations:
+  - Valider strictement tous les chemins et arguments passés à `execlp()` (ne jamais utiliser des chemins fournis par des sources non sûres).
+  - Restreindre les droits du processus parent (drop privileges) avant `exec` si possible.
+  - Documenter et auditer les binaires appelés (hash + provenance) ; appliquer contrôle de version/approbation pour les binaires.
+  - Ajouter checks dans CI (threat model) : signaler tout ajout de `exec*`/`vfork` dans les reviews.
+
+---
+
+## File: runit/chpst.c
+- Type: C
+- Entrée:
+  - Options CLI et variables d'environnement (utilisées pour `chpst`, `setuidgid`, etc.)
+- Transformation / traitement:
+  - Fournit utilitaires pour changer UID/GID (setuidgid family) et exécuter processus sous d'autres comptes.
+  - Inclut opérations sur limites de ressources (`getrlimit`) et changements de contexte utilisateur.
+- Sortie:
+  - Processus relancé sous un autre UID/GID
+  - Logs / codes de retour
+- Points de risque:
+  - **Manipulation de privilèges (setuidgid)** : si mal contrôlé, peut permettre élévation de privilèges ou exécution sous comptes privilégiés — **HIGH**
+  - **Mauvaise validation des arguments** (ex: chemins, comptes) pouvant conduire à exécution non souhaitée — **MED/HIGH**
+  - Présence de `#include <sys/resource.h>` et usage de limites -> risque d'abus si les ressources sont mal configurées — **MED**
+- Recommandations:
+  - Restreindre qui peut invoquer ces utilitaires (RBAC / ACL).
+  - Valider l'existence et la propriété des comptes avant de faire setuid/setgid.
+  - Ajouter tests statiques / revue stricte pour toute modification de code manipulant UID/GID.
+  - Documenter le flux d'autorisations (qui peut démarrer quoi) dans `security_playbook.md`.
+## File: runit/runsvdir.c
+- Type: C
+- Entrée:
+  - Paramètres de démarrage du daemon (nom des services, options de configuration)
+  - Variables d'environnement héritées
+- Transformation / traitement:
+  - Utilise `vfork()` pour créer un processus enfant puis `execlp()` pour remplacer l'image processus par `runsv`.
+  - Gère signaux et boucle de création/respawn de services.
+- Sortie:
+  - Lancement d’un sous-processus `runsv` (service)
+  - Logs système / messages d'erreur
+- Points de risque:
+  - **Usage de `vfork()` + `execlp()`** : exécution de nouveaux binaires — risque d'exécution de code non contrôlé si les arguments ou chemins sont manipulables. — **HIGH**
+  - **Possibilité d'injection d'arguments** si des données non-sanitized sont passées au `execlp`. — **HIGH**
+  - Si l’exécutable remplacé est compromis, cela permet exécution persistante et élévation locale. — **HIGH**
+- Recommandations:
+  - Valider strictement tous les chemins et arguments passés à `execlp()` (ne jamais utiliser des chemins fournis par des sources non sûres).
+  - Restreindre les droits du processus parent (drop privileges) avant `exec` si possible.
+  - Documenter et auditer les binaires appelés (hash + provenance) ; appliquer contrôle de version/approbation pour les binaires.
+  - Ajouter checks dans CI (threat model) : signaler tout ajout de `exec*`/`vfork` dans les reviews.
+
+---
+
+## File: runit/chpst.c
+- Type: C
+- Entrée:
+  - Options CLI et variables d'environnement (utilisées pour `chpst`, `setuidgid`, etc.)
+- Transformation / traitement:
+  - Fournit utilitaires pour changer UID/GID (setuidgid family) et exécuter processus sous d'autres comptes.
+  - Inclut opérations sur limites de ressources (`getrlimit`) et changements de contexte utilisateur.
+- Sortie:
+  - Processus relancé sous un autre UID/GID
+  - Logs / codes de retour
+- Points de risque:
+  - **Manipulation de privilèges (setuidgid)** : si mal contrôlé, peut permettre élévation de privilèges ou exécution sous comptes privilégiés — **HIGH**
+  - **Mauvaise validation des arguments** (ex: chemins, accounts) pouvant conduire à exécution non souhaitée — **MED/HIGH**
+  - Présence de `#include <sys/resource.h>` et usage de limites -> risque d'abus si les ressources sont mal configurées — **MED**
+- Recommandations:
+  - Restreindre qui peut invoquer ces utilitaires (RBAC / ACL).
+  - Valider l'existence et la propriété des comptes avant de faire setuid/setgid.
+  - Ajouter tests statiques / revue stricte pour toute modification de code manipulant UID/GID.
+  - Documenter le flux d'autorisations (qui peut démarrer quoi) dans `security_playbook.md`.
