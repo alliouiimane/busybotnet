@@ -1,0 +1,23 @@
+name: CI Build
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  check-binaries:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Find binaries
+        run: |
+          if find . -type f -executable | grep -q .; then
+            echo "Executable files found! Failing CI."
+            exit 1
+          else
+            echo "No executables found. CI passes."
+          fi
