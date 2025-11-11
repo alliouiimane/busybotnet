@@ -1,0 +1,134 @@
+nc.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 82 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+platform.h:132:0: information: Include file: <stdarg.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+# include <stdarg.h>
+^
+platform.h:141:0: information: Include file: <limits.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <limits.h>
+^
+platform.h:152:0: information: Include file: <byteswap.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+# include <byteswap.h>
+^
+platform.h:153:0: information: Include file: <endian.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+# include <endian.h>
+^
+platform.h:143:0: information: Include file: <sex.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+# include <sex.h>
+^
+platform.h:209:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+platform.h:264:0: information: Include file: <stdbool.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+# include <stdbool.h>
+^
+platform.h:298:0: information: Include file: <unistd.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <unistd.h>
+^
+libbb.h:15:0: information: Include file: <ctype.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <ctype.h>
+^
+libbb.h:16:0: information: Include file: <dirent.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <dirent.h>
+^
+libbb.h:17:0: information: Include file: <errno.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <errno.h>
+^
+libbb.h:18:0: information: Include file: <fcntl.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <fcntl.h>
+^
+libbb.h:19:0: information: Include file: <inttypes.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <inttypes.h>
+^
+libbb.h:20:0: information: Include file: <netdb.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <netdb.h>
+^
+libbb.h:21:0: information: Include file: <setjmp.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <setjmp.h>
+^
+libbb.h:22:0: information: Include file: <signal.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <signal.h>
+^
+libbb.h:29:0: information: Include file: <stdint.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdint.h>
+^
+libbb.h:30:0: information: Include file: <stdio.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdio.h>
+^
+libbb.h:31:0: information: Include file: <stdlib.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdlib.h>
+^
+libbb.h:32:0: information: Include file: <stdarg.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stdarg.h>
+^
+libbb.h:33:0: information: Include file: <stddef.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <stddef.h>
+^
+libbb.h:34:0: information: Include file: <string.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <string.h>
+^
+libbb.h:37:0: information: Include file: <libgen.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <libgen.h> /* dirname,basename */
+^
+libbb.h:40:0: information: Include file: <poll.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <poll.h>
+^
+libbb.h:41:0: information: Include file: <sys/ioctl.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <sys/ioctl.h>
+^
+libbb.h:42:0: information: Include file: <sys/mman.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <sys/mman.h>
+^
+libbb.h:43:0: information: Include file: <sys/socket.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <sys/socket.h>
+^
+libbb.h:44:0: information: Include file: <sys/stat.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <sys/stat.h>
+^
+libbb.h:45:0: information: Include file: <sys/time.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <sys/time.h>
+^
+libbb.h:46:0: information: Include file: <sys/types.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <sys/types.h>
+^
+libbb.h:48:0: information: Include file: <sys/sysmacros.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+# include <sys/sysmacros.h>
+^
+libbb.h:50:0: information: Include file: <sys/wait.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <sys/wait.h>
+^
+libbb.h:51:0: information: Include file: <termios.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <termios.h>
+^
+libbb.h:52:0: information: Include file: <time.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <time.h>
+^
+libbb.h:53:0: information: Include file: <sys/param.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <sys/param.h>
+^
+libbb.h:54:0: information: Include file: <pwd.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <pwd.h>
+^
+libbb.h:55:0: information: Include file: <grp.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+#include <grp.h>
+^
+libbb.h:69:0: information: Include file: <mntent.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+# include <mntent.h>
+^
+libbb.h:72:0: information: Include file: <sys/statfs.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+# include <sys/statfs.h>
+^
+libbb.h:139:0: information: Include file: <arpa/inet.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+# include <arpa/inet.h>
+^
+libbb.h:1598:2: error: There is an unknown macro here somewhere. Configuration is required. If IF_FEATURE_SHOW_THREADS is a macro then please configure it. [unknownMacro]
+ IF_FEATURE_SHOW_THREADS(DIR *task_dir;)
+ ^
+platform.h:146:0: information: Include file: <sys/resource.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+# include <sys/resource.h>  /* rlimit */
+^
+platform.h:147:0: information: Include file: <machine/endian.h> not found. Please note: Cppcheck does not need standard library headers to get proper results. [missingIncludeSystem]
+# include <machine/endian.h>
+^
+nofile:0:0: information: Active checkers: There was critical errors (use --checkers-report=<filename> to see details) [checkersReport]
+
