@@ -1,0 +1,40 @@
+{
+  "errors": [
+    {
+      "filename": "./libpcap-libpcap-1.9.0/testprogs/visopts.py",
+      "reason": "syntax error while parsing AST from file"
+    }
+  ],
+  "generated_at": "2025-11-11T13:53:46Z",
+  "metrics": {
+    "./libpcap-libpcap-1.9.0/testprogs/visopts.py": {
+      "loc": 280,
+      "nosec": 0
+    },
+    "./miscutils/zmap/zmap_schema.py": {
+      "CONFIDENCE.HIGH": 0.0,
+      "CONFIDENCE.LOW": 0.0,
+      "CONFIDENCE.MEDIUM": 0.0,
+      "CONFIDENCE.UNDEFINED": 0.0,
+      "SEVERITY.HIGH": 0.0,
+      "SEVERITY.LOW": 0.0,
+      "SEVERITY.MEDIUM": 0.0,
+      "SEVERITY.UNDEFINED": 0.0,
+      "loc": 84,
+      "nosec": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 0.0,
+      "CONFIDENCE.LOW": 0.0,
+      "CONFIDENCE.MEDIUM": 0.0,
+      "CONFIDENCE.UNDEFINED": 0.0,
+      "SEVERITY.HIGH": 0.0,
+      "SEVERITY.LOW": 0.0,
+      "SEVERITY.MEDIUM": 0.0,
+      "SEVERITY.UNDEFINED": 0.0,
+      "loc": 364,
+      "nosec": 0
+    }
+  },
+  "results": []
+}

@@ -1,0 +1,260 @@
+bitcore.c:83:20: style: The scope of the variable 'hashB' can be reduced. [variableScope]
+ uint32_t *hashA, *hashB;
+                   ^
+bitcore.c:192:20: style: Variable 'restart' can be declared as pointer to const [constVariablePointer]
+ volatile uint8_t *restart = &(work_restart[thr_id].restart);
+                   ^
+bitcore.c:84:19: style: Variable 'dataLen' is assigned a value that is never used. [unreadVariable]
+ uint32_t dataLen = 64;
+                  ^
+c11.c:95:20: style: Variable 'restart' can be declared as pointer to const [constVariablePointer]
+ volatile uint8_t *restart = &(work_restart[thr_id].restart);
+                   ^
+cryptolight.c:180:12: style: The scope of the variable 'j' can be reduced. [variableScope]
+ size_t i, j;
+           ^
+cryptolight.c:262:12: style: The scope of the variable 'j' can be reduced. [variableScope]
+ size_t i, j;
+           ^
+cryptolight.c:340:12: style: Variable 'ptarget' can be declared as pointer to const [constVariablePointer]
+ uint32_t *ptarget = work->target;
+           ^
+cryptonight.c:180:12: style: The scope of the variable 'j' can be reduced. [variableScope]
+ size_t i, j;
+           ^
+cryptonight.c:269:12: style: The scope of the variable 'j' can be reduced. [variableScope]
+ size_t i, j;
+           ^
+cryptonight.c:346:12: style: Variable 'ptarget' can be declared as pointer to const [constVariablePointer]
+ uint32_t *ptarget = work->target;
+           ^
+drop.c:130:8: style: Variable 'j' is assigned a value that is never used. [unreadVariable]
+ int j = 0;
+       ^
+drop.c:131:12: style: Variable 'start' is assigned a value that is never used. [unreadVariable]
+ int start = 0;
+           ^
+fresh.c:59:11: style: Variable 'htmax' can be declared as const array [constVariable]
+ uint64_t htmax[] = {
+          ^
+fresh.c:67:11: style: Variable 'masks' can be declared as const array [constVariable]
+ uint32_t masks[] = {
+          ^
+heavy.c:14:12: style: Variable 'hash' can be declared as const array [constVariable]
+ uint32_t *hash[4] = { hash1, hash2, hash3, hash4 };
+           ^
+jha.c:66:11: style: Variable 'htmax' can be declared as const array [constVariable]
+ uint64_t htmax[] = {
+          ^
+jha.c:74:11: style: Variable 'masks' can be declared as const array [constVariable]
+ uint32_t masks[] = {
+          ^
+neoscrypt.c:172:20: style: The scope of the variable 'want' can be reduced. [variableScope]
+    size_t blocks, want;
+                   ^
+neoscrypt.c:345:80: style: The scope of the variable 't' can be reduced. [variableScope]
+    uint x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13, x14, x15, t;
+                                                                               ^
+neoscrypt.c:379:80: style: The scope of the variable 't' can be reduced. [variableScope]
+    uint x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12, x13, x14, x15, t;
+                                                                               ^
+neoscrypt.c:432:20: style: The scope of the variable 't0' can be reduced. [variableScope]
+    register ulong t0, t1, t2, t3;
+                   ^
+neoscrypt.c:432:24: style: The scope of the variable 't1' can be reduced. [variableScope]
+    register ulong t0, t1, t2, t3;
+                       ^
+neoscrypt.c:432:28: style: The scope of the variable 't2' can be reduced. [variableScope]
+    register ulong t0, t1, t2, t3;
+                           ^
+neoscrypt.c:432:32: style: The scope of the variable 't3' can be reduced. [variableScope]
+    register ulong t0, t1, t2, t3;
+                               ^
+neoscrypt.c:630:10: style: The scope of the variable 'left' can be reduced. [variableScope]
+    uint left, fill;
+         ^
+neoscrypt.c:630:16: style: The scope of the variable 'fill' can be reduced. [variableScope]
+    uint left, fill;
+               ^
+neoscrypt.c:715:20: style: The scope of the variable 'prf_input' can be reduced. [variableScope]
+    uchar *A, *B, *prf_input, *prf_key, *prf_output;
+                   ^
+neoscrypt.c:715:32: style: The scope of the variable 'prf_key' can be reduced. [variableScope]
+    uchar *A, *B, *prf_input, *prf_key, *prf_output;
+                               ^
+neoscrypt.c:416:12: style: Variable 'src' can be declared as pointer to const [constVariablePointer]
+    ulong *src = (ulong *) srcp;
+           ^
+neoscrypt.c:455:12: style: Variable 'src' can be declared as pointer to const [constVariablePointer]
+    ulong *src = (ulong *) srcp;
+           ^
+neoscrypt.c:471:12: style: Variable 'src' can be declared as pointer to const [constVariablePointer]
+    ulong *src = (ulong *) srcp;
+           ^
+neoscrypt.c:480:16: style: Variable 'srcb' can be declared as pointer to const [constVariablePointer]
+        uchar *srcb = (uchar *) srcp;
+               ^
+neoscrypt.c:508:12: style: Variable 'src' can be declared as pointer to const [constVariablePointer]
+    ulong *src = (ulong *) srcp;
+           ^
+neoscrypt.c:517:16: style: Variable 'srcb' can be declared as pointer to const [constVariablePointer]
+        uchar *srcb = (uchar *) srcp;
+               ^
+neoscrypt.c:715:20: style: Variable 'prf_input' can be declared as pointer to const [constVariablePointer]
+    uchar *A, *B, *prf_input, *prf_key, *prf_output;
+                   ^
+neoscrypt.c:715:32: style: Variable 'prf_key' can be declared as pointer to const [constVariablePointer]
+    uchar *A, *B, *prf_input, *prf_key, *prf_output;
+                               ^
+neoscrypt.c:1040:15: style: Variable 'ptarget' can be declared as pointer to const [constVariablePointer]
+    uint32_t *ptarget = work->target;
+              ^
+neoscrypt.c:556:11: style: struct member 'blake2s_param_t::leaf_length' is never used. [unusedStructMember]
+    uint  leaf_length;
+          ^
+nist5.c:57:11: style: Variable 'htmax' can be declared as const array [constVariable]
+ uint64_t htmax[] = {
+          ^
+nist5.c:65:11: style: Variable 'masks' can be declared as const array [constVariable]
+ uint32_t masks[] = {
+          ^
+pentablake.c:50:11: style: Variable 'htmax' can be declared as const array [constVariable]
+ uint64_t htmax[] = {
+          ^
+pentablake.c:58:11: style: Variable 'masks' can be declared as const array [constVariable]
+ uint32_t masks[] = {
+          ^
+pluck.c:453:20: style: Variable 'restart' can be declared as pointer to const [constVariablePointer]
+ volatile uint8_t *restart = &(work_restart[thr_id].restart);
+                   ^
+qubit.c:58:11: style: Variable 'htmax' can be declared as const array [constVariable]
+ uint64_t htmax[] = {
+          ^
+qubit.c:66:11: style: Variable 'masks' can be declared as const array [constVariable]
+ uint32_t masks[] = {
+          ^
+s3.c:46:11: style: Variable 'htmax' can be declared as const array [constVariable]
+ uint64_t htmax[] = {
+          ^
+s3.c:54:11: style: Variable 'masks' can be declared as const array [constVariable]
+ uint32_t masks[] = {
+          ^
+scrypt.c:512:12: style: Parameter 'midstate' can be declared as pointer to const [constParameterPointer]
+ uint32_t *midstate, unsigned char *scratchpad, int N)
+           ^
+scrypt.c:531:30: style: Parameter 'midstate' can be declared as pointer to const [constParameterPointer]
+ uint32_t *output, uint32_t *midstate, unsigned char *scratchpad, int N)
+                             ^
+scrypt.c:738:18: style: Condition 'throughput==3' is always true [knownConditionTrueFalse]
+  if (throughput == 3)
+                 ^
+scrypt.c:704:19: note: Assignment 'throughput=3', assigned value is 3
+ int throughput = scrypt_best_throughput();
+                  ^
+scrypt.c:738:18: note: Condition 'throughput==3' is always true
+  if (throughput == 3)
+                 ^
+scrypt.c:570:30: style: Parameter 'midstate' can be declared as pointer to const [constParameterPointer]
+ uint32_t *output, uint32_t *midstate, unsigned char *scratchpad, int N)
+                             ^
+scrypt.c:648:30: style: Parameter 'midstate' can be declared as pointer to const [constParameterPointer]
+ uint32_t *output, uint32_t *midstate, unsigned char *scratchpad, int N)
+                             ^
+../scryptjane/scrypt-jane-hash_keccak.h:113:9: style: The scope of the variable 'want' can be reduced. [variableScope]
+ size_t want;
+        ^
+../scryptjane/scrypt-jane-romix-basic.h:16:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+ size_t i;
+        ^
+../scryptjane/scrypt-jane-mix_chacha.h:13:65: style: The scope of the variable 't' can be reduced. [variableScope]
+ uint32_t x0,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,t;
+                                                                ^
+../scryptjane/scrypt-jane-romix-template.h:72:14: style: The scope of the variable 'j' can be reduced. [variableScope]
+ uint32_t i, j, chunkWords = SCRYPT_BLOCK_WORDS * r * 2;
+             ^
+../scryptjane/scrypt-jane-chacha.h:125:18: style: Variable 'cpuflags' is assigned a value that is never used. [unreadVariable]
+ size_t cpuflags = detect_cpu();
+                 ^
+../scryptjane/scrypt-jane-portable-x86.h:302:25: style: Variable 'vendor' is assigned a value that is never used. [unreadVariable]
+ cpu_vendors_x86 vendor = cpu_nobody;
+                        ^
+../scryptjane/scrypt-jane-portable-x86.h:322:10: style: Variable 'vendor' is assigned a value that is never used. [unreadVariable]
+  vendor = cpu_intel;
+         ^
+../scryptjane/scrypt-jane-portable-x86.h:324:10: style: Variable 'vendor' is assigned a value that is never used. [unreadVariable]
+  vendor = cpu_amd;
+         ^
+sibcoin.c:101:20: style: Variable 'restart' can be declared as pointer to const [constVariablePointer]
+ volatile uint8_t *restart = &(work_restart[thr_id].restart);
+                   ^
+sonoa.c:376:11: style: Variable 'htmax' can be declared as const array [constVariable]
+ uint64_t htmax[] = {
+          ^
+sonoa.c:384:11: style: Variable 'masks' can be declared as const array [constVariable]
+ uint32_t masks[] = {
+          ^
+timetravel.c:75:20: style: The scope of the variable 'hashB' can be reduced. [variableScope]
+ uint32_t *hashA, *hashB;
+                   ^
+timetravel.c:172:20: style: Variable 'restart' can be declared as pointer to const [constVariablePointer]
+ volatile uint8_t *restart = &(work_restart[thr_id].restart);
+                   ^
+timetravel.c:76:19: style: Variable 'dataLen' is assigned a value that is never used. [unreadVariable]
+ uint32_t dataLen = 64;
+                  ^
+tribus.c:45:11: style: Variable 'htmax' can be declared as const array [constVariable]
+ uint64_t htmax[] = {
+          ^
+tribus.c:53:11: style: Variable 'masks' can be declared as const array [constVariable]
+ uint32_t masks[] = {
+          ^
+veltor.c:68:20: style: Variable 'restart' can be declared as pointer to const [constVariablePointer]
+ volatile uint8_t *restart = &(work_restart[thr_id].restart);
+                   ^
+x11.c:96:20: style: Variable 'restart' can be declared as pointer to const [constVariablePointer]
+ volatile uint8_t *restart = &(work_restart[thr_id].restart);
+                   ^
+x11evo.c:133:13: style: Variable 'data' can be declared as pointer to const [constVariablePointer]
+  uint32_t *data = (uint32_t*) input;
+            ^
+x11evo.c:224:20: style: Variable 'restart' can be declared as pointer to const [constVariablePointer]
+ volatile uint8_t *restart = &(work_restart[thr_id].restart);
+                   ^
+x12.c:99:20: style: Variable 'restart' can be declared as pointer to const [constVariablePointer]
+ volatile uint8_t *restart = &(work_restart[thr_id].restart);
+                   ^
+x13.c:108:11: style: Variable 'htmax' can be declared as const array [constVariable]
+ uint64_t htmax[] = {
+          ^
+x13.c:116:11: style: Variable 'masks' can be declared as const array [constVariable]
+ uint32_t masks[] = {
+          ^
+x14.c:115:11: style: Variable 'htmax' can be declared as const array [constVariable]
+ uint64_t htmax[] = {
+          ^
+x14.c:123:11: style: Variable 'masks' can be declared as const array [constVariable]
+ uint32_t masks[] = {
+          ^
+x15.c:121:11: style: Variable 'htmax' can be declared as const array [constVariable]
+ uint64_t htmax[] = {
+          ^
+x15.c:129:11: style: Variable 'masks' can be declared as const array [constVariable]
+ uint32_t masks[] = {
+          ^
+x16r.c:198:20: style: Variable 'restart' can be declared as pointer to const [constVariablePointer]
+ volatile uint8_t *restart = &(work_restart[thr_id].restart);
+                   ^
+x16s.c:55:11: style: Variable 'data' can be declared as pointer to const [constVariablePointer]
+ uint8_t* data = (uint8_t*)prevblock;
+          ^
+x16s.c:203:20: style: Variable 'restart' can be declared as pointer to const [constVariablePointer]
+ volatile uint8_t *restart = &(work_restart[thr_id].restart);
+                   ^
+x17.c:131:20: style: Variable 'restart' can be declared as pointer to const [constVariablePointer]
+ volatile uint8_t *restart = &(work_restart[thr_id].restart);
+                   ^
+xevan.c:202:20: style: Variable 'restart' can be declared as pointer to const [constVariablePointer]
+ volatile uint8_t *restart = &(work_restart[thr_id].restart);
+                   ^
+nofile:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 configurations. Use --force to check all configurations. For more details, use --enable=information. [toomanyconfigs]
+

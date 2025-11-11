@@ -1,0 +1,22 @@
+Run started:2025-11-11 13:53:46.154878
+
+Test results:
+	No issues identified.
+
+Code scanned:
+	Total lines of code: 364
+	Total lines skipped (#nosec): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 0.0
+		High: 0.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 0.0
+		High: 0.0
+Files skipped (1):
+	./libpcap-libpcap-1.9.0/testprogs/visopts.py (syntax error while parsing AST from file)
